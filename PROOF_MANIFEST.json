@@ -1,0 +1,378 @@
+{
+  "schema_version": "proof-artifact-inventory-1.1.0",
+  "mathematical_release": "reciprocal-robin-1.0.0",
+  "package_version": "1.0.0",
+  "manuscript": "Reciprocal LCM powers and Robin's criterion",
+  "verification_command": "python scripts/verify_release.py",
+  "strict_environment_command": "python scripts/verify_release.py --strict-environment",
+  "artifacts": [
+    {
+      "path": "data/kappa_five_interval_certificate.json",
+      "role": "Directed-interval certificate for the unconditional results. The interval 1 < kappa <= 5 uses the squared-primorial range, Mertens extension, normalized endpoint, and low-support margin; the uniform explicit bound uses the primorial threshold and shares the Mertens extension; the bounded-parameter analytic handoff also invokes that certified Mertens extension.",
+      "verifier": "scripts/verify_kappa_five_certificate.py",
+      "load_bearing": true,
+      "sha256": "38d5d8ac0c45d40962c3aa25acb4eeea4d59716bc8a45d7eaad417a0d3322d51",
+      "bytes": 536109
+    },
+    {
+      "path": "data/CERTIFICATION_RESULTS.json",
+      "role": "Certified run record for the advertised all-integer interval 1 < kappa <= 100000. It records the verification environment, frontier certificate digest and size, finite-tail handoff, endpoint count, and certified margins. The frontier certificate itself is reproducible from this release but is not bundled.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": true,
+      "sha256": "02abefa80b27560c138a01308805125b6d235f59f695fb09a899d827c3f53197",
+      "bytes": 2590
+    },
+    {
+      "path": "data/kappa_1000_endpoint_certificate.json",
+      "role": "Compact regression fixture for the generic bounded-parameter generator and independent verifier; not the proof artifact for the advertised kappa=100000 frontier.",
+      "verifier": "scripts/verify_bounded_parameter_certificate.py",
+      "load_bearing": false,
+      "sha256": "0d38f82feea281bb1679f99af3765565241f30edc8ab0b01028d100005050ac4",
+      "bytes": 1659986
+    },
+    {
+      "path": "pyproject.toml",
+      "role": "Package metadata and direct dependency specification.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "962c88e0e1678a960bfe0eee6f607b4508ab9b82926de2173b16ecbdb088506f",
+      "bytes": 2191
+    },
+    {
+      "path": "CITATION.cff",
+      "role": "Archive-ready software citation metadata.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "fbc2e7c6b42bc4d8923c2003a186592b9fb478c63ff2ec63b43f04c1812fda5a",
+      "bytes": 529
+    },
+    {
+      "path": "poetry.lock",
+      "role": "Poetry dependency lock used for the release environment.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "110ce6f5098afba48efa553c6d6fa923877b8dc311787f2b66afe4bd019f1f63",
+      "bytes": 33719
+    },
+    {
+      "path": "requirements-verification.txt",
+      "role": "Portable exact package pins for proof verification without Poetry.",
+      "verifier": "scripts/verify_release.py --strict-environment",
+      "load_bearing": false,
+      "sha256": "4a4b817380d67e0f797b4fceaac461796975f74e8adc1f868dac41b8534b009b",
+      "bytes": 434
+    },
+    {
+      "path": "README.md",
+      "role": "Public entry point for the software and certificate-verification release.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "17a4c60d4d2f85e25a50ffe07a3929e043b5854ab1fd84b6c7e369aa672f23d9",
+      "bytes": 5563
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "role": "Public description of the certification trust boundary and package architecture.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "ecff0bdf3fc8c1f165b76e772d6c4b5733b57b7bb7684cc4ea2e97fa902bb66c",
+      "bytes": 3480
+    },
+    {
+      "path": "CERTIFICATION.md",
+      "role": "Public proof-artifact verification and regeneration instructions.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "83aa5721a43233e0550a966504ff0e3a13f1556f45141d0a15494bb1bd6db8ad",
+      "bytes": 8249
+    },
+    {
+      "path": "scripts/build_proof_manifest.py",
+      "role": "Certificate generation, verification, or release-support script.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "02dc99d341ef61f7c8bcf3d5b5c85e3170560a196c485492619b01d0cf93e282",
+      "bytes": 6454
+    },
+    {
+      "path": "scripts/certify_bounded_parameter_interval.py",
+      "role": "Certificate generation, verification, or release-support script.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "75369e0157156dda9017efec7f4b9d44996060aeda688cf85f30e96c82749eac",
+      "bytes": 369
+    },
+    {
+      "path": "scripts/certify_kappa_five_interval.py",
+      "role": "Certificate generation, verification, or release-support script.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "96bfec782e54ccaa087d161c1a8ec94601204ff1518ea8bc787235b4210fa668",
+      "bytes": 380
+    },
+    {
+      "path": "scripts/release_support.py",
+      "role": "Certificate generation, verification, or release-support script.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "6970a7c2886240d3071a35b0db75e31475880482ab32bdf6af8b2e510f631728",
+      "bytes": 1254
+    },
+    {
+      "path": "scripts/reproduce_paper.py",
+      "role": "Certificate generation, verification, or release-support script.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "9e975cfaa0424079186a0a149acb846246831a51e97c1c58df691624a408f2b9",
+      "bytes": 2047
+    },
+    {
+      "path": "scripts/sweep_bounded_parameter.py",
+      "role": "Certificate generation, verification, or release-support script.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "ba28f6707693f84d9d20b583dee69aeed2d0ec2b47d0b90b964e46b66378062f",
+      "bytes": 335
+    },
+    {
+      "path": "scripts/verify_bounded_parameter_certificate.py",
+      "role": "Certificate generation, verification, or release-support script.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "cdd3490683ab7c1add58737b1f154b89c6013e87de1954b98770cbd225975558",
+      "bytes": 376
+    },
+    {
+      "path": "scripts/verify_kappa_five_certificate.py",
+      "role": "Certificate generation, verification, or release-support script.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "b3d46860fffe5dfcdfa17317006f1a33accdf185f69b8ff5ee33a075570ab03f",
+      "bytes": 388
+    },
+    {
+      "path": "scripts/verify_paper_numerics.py",
+      "role": "Certificate generation, verification, or release-support script.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "0bf608ec7f600224caf410290cddb3c09ec9260095f8865bcdbe55250c209502",
+      "bytes": 1412
+    },
+    {
+      "path": "scripts/verify_release.py",
+      "role": "Certificate generation, verification, or release-support script.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "4f6cb81ed01491ea9ded43b111b85814c3a6435fe50356d40b62d7cbb0fb1b19",
+      "bytes": 13314
+    },
+    {
+      "path": "src/reciprocal_robin/__init__.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "feae0423fd4057b209f5579326b328d52ce4e5139a612e1ebe6c1e5951e3c953",
+      "bytes": 1469
+    },
+    {
+      "path": "src/reciprocal_robin/_field.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "3971ff7f3dc5d041de4eea93f7ac4352fc9425bb6aa7298ff74b6c2897616601",
+      "bytes": 5337
+    },
+    {
+      "path": "src/reciprocal_robin/_precision.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "1198b5355faa60c2b5587c92ae660f338f80f0d4412018796d9fcf84caf60cc9",
+      "bytes": 1228
+    },
+    {
+      "path": "src/reciprocal_robin/_serialization.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "50902e57c6c42f814483667eb669a5f9e3257279561b6639ad380175893bdd9a",
+      "bytes": 1535
+    },
+    {
+      "path": "src/reciprocal_robin/_types.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "2e006c9e00037d1b3434a978d3b8d1966a521b9830371fdb7ed5499adfa9e137",
+      "bytes": 336
+    },
+    {
+      "path": "src/reciprocal_robin/_validation.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "2f9bfc0904d02743ecbbe249aa8e5a41679f83552881c554cfaa2654a6e51ebc",
+      "bytes": 4043
+    },
+    {
+      "path": "src/reciprocal_robin/arithmetic.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "4f2dfc98287c9f05d984c154234a3d4182fe01ccdc47d15aa28c09c7106eb5f5",
+      "bytes": 4452
+    },
+    {
+      "path": "src/reciprocal_robin/ca.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "f04c1b633880ef952e5651ce97aa79802d59986f12292a00556fe105a8bb497b",
+      "bytes": 5934
+    },
+    {
+      "path": "src/reciprocal_robin/ca_grid.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "8a7e31e55e8ecfd48c6f26ac87f3221ee66dcc7f48184bee9f931ad2927958c5",
+      "bytes": 6879
+    },
+    {
+      "path": "src/reciprocal_robin/certification/__init__.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "1b4f279cec3d4a3864ab5da31261a0988920ababf0eb5e4f7e80a3bb79af3f0c",
+      "bytes": 488
+    },
+    {
+      "path": "src/reciprocal_robin/certification/__main__.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "415badf28502a345118a7624f39bafcc8c399c529bace50b8c1bdccb5eab9f9e",
+      "bytes": 2031
+    },
+    {
+      "path": "src/reciprocal_robin/certification/bounded_generate.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "e31b70e03cdd970b5843cc78dccbc3c3e78c77bc359654e09c34b6da9da58205",
+      "bytes": 22002
+    },
+    {
+      "path": "src/reciprocal_robin/certification/bounded_verify.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "db4439e31b16a5790caa2ef789a325dbd6234ac729550a85bf70ae12671b6c84",
+      "bytes": 26096
+    },
+    {
+      "path": "src/reciprocal_robin/certification/kappa_five_generate.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "e6b82bbca464c5d71e2ee02c40c41aa7e4c40c9026c425cbbba389d60b2c9611",
+      "bytes": 10467
+    },
+    {
+      "path": "src/reciprocal_robin/certification/kappa_five_verify.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "f777fe1d644e86bd64ca637ec3ab3b893c53acf7db7209393c07ac41c8a7eaf5",
+      "bytes": 13034
+    },
+    {
+      "path": "src/reciprocal_robin/certification/runtime.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "3bd180d1adf895380249bb8f7c8dfbec976790646394923fc68077c0fd1c680c",
+      "bytes": 1167
+    },
+    {
+      "path": "src/reciprocal_robin/certification/sweep.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "c3f0720851717f29a43efcb2f57b5ad0889e90a10d1e131cf5988ffe57dad77f",
+      "bytes": 15586
+    },
+    {
+      "path": "src/reciprocal_robin/cli.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "b9ea61d41c75ce43d0762dc652d0e46c8d3bcbd9d66fc3277bcc4970ebda12b3",
+      "bytes": 9012
+    },
+    {
+      "path": "src/reciprocal_robin/exploration.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "4a54e1e2b69f74fb3d43ecfcc789f6f79cea3247a496fb711c29d3fedcac4591",
+      "bytes": 1118
+    },
+    {
+      "path": "src/reciprocal_robin/factorization.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "9da57f2f813b1c185fa5b433f3cb8ce5c8d139034ab6e074a3a39478b05c0aaa",
+      "bytes": 4476
+    },
+    {
+      "path": "src/reciprocal_robin/incremental_ratio.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "ac94186c90a7700c15095492afc1a1c58ab8cc64faa25b586b90a78cd760931c",
+      "bytes": 5637
+    },
+    {
+      "path": "src/reciprocal_robin/normalized.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "2b10d6e1482b69b2b278b2afa8cfb5c3ebfbfb2ba0b7110bc074f59941e4b387",
+      "bytes": 7905
+    },
+    {
+      "path": "src/reciprocal_robin/normalized_ca.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "fbcee0e7f752c401f76f8ad485f1a9debb6472e9bd0b4ad2c06b312fc70be510",
+      "bytes": 1625
+    },
+    {
+      "path": "src/reciprocal_robin/paper_numerics.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "829b362e72026ebd9e547043350514e66fef41b4a3e532d6b009d964a9af1e12",
+      "bytes": 9427
+    },
+    {
+      "path": "src/reciprocal_robin/successor.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "bfd4b69c97cc3608ebcf5a872f7ae3be82057fc6fc26ab8e53eb245783056c40",
+      "bytes": 3103
+    },
+    {
+      "path": "src/reciprocal_robin/walker.py",
+      "role": "Package source used by the certificate-verification scripts.",
+      "verifier": "scripts/verify_release.py",
+      "load_bearing": false,
+      "sha256": "cd5f74a987436606bedb86e577b148a65f15eb7f2e90f7b051234d24c160b5c4",
+      "bytes": 2368
+    }
+  ]
+}

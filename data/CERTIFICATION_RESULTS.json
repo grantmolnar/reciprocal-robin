@@ -1,0 +1,57 @@
+{
+  "advertised_kappa": 100000,
+  "certificate_policy": {
+    "frontier_certificate_bundled": false,
+    "reason": "The K=100000 certificate is reproducible from this release but is 3,624,666,835 bytes.",
+    "regression_certificate_bundled_kappa": 1000
+  },
+  "frontier_run": {
+    "canonical_events": 39454,
+    "certificate_bytes": 3624666835,
+    "certificate_sha256": "d94f3499a46c155fbcdd7e0a6f20f773ca8dd031f2af9b4217246aff9f5456c3",
+    "dps": 60,
+    "first_endpoint_above_5040": "55440",
+    "generate_seconds": 4088.597964,
+    "initial_integer_checks": 50399,
+    "initial_minimum_at_n": 10080,
+    "initial_minimum_margin_lo": "0.0574862249220597354415065832882576577170040465795692420202015",
+    "kappa": 100000,
+    "last_bad_prime": 227951,
+    "minimum_endpoint_log_margin_endpoint": "5188157777372327105336364268619531813096569655284406775516493148299102774383265912397247310195469719660194294707527710695794074730971525178523520000",
+    "minimum_endpoint_log_margin_lo": "0.0115162368884362128760301502048814195646339738323144527638657",
+    "prime_rows_checked": 21758,
+    "status": "verified",
+    "tail_start_prime": 227977,
+    "timestamp_utc": "2026-09-29T17:47:00+00:00",
+    "verify_seconds": 3373.270695,
+    "finite_tail_detail": {
+      "A_K_floor": 75002,
+      "C_K_lo": "74670.6603743861432895238431963189329676157552770798616832021",
+      "C_K_hi": "74670.6603743861432895238431963189329676157552770798616832316",
+      "analytic_cutoff": 246590,
+      "prime_rows_checked": 21758,
+      "last_bad_prime": 227951,
+      "tail_start_prime": 227977,
+      "terminal_block_min_margin_lo": "0.00000682322919535669014203199545000609252897049512078276797868416",
+      "terminal_block_min_margin_prime": 227989
+    },
+    "entry_parameter": {
+      "prime": 227977,
+      "exponent": 1,
+      "epsilon_lo": "0.000000184261994507654963143762636334479961060223001457862428658438",
+      "epsilon_hi": "0.000000184261994507654963143762636334479961060223001457862428797153"
+    },
+    "reproduction": {
+      "generate": "python scripts/certify_bounded_parameter_interval.py --kappa 100000 --output kappa_100000_endpoint_certificate.json",
+      "verify": "python scripts/verify_bounded_parameter_certificate.py --certificate kappa_100000_endpoint_certificate.json"
+    }
+  },
+  "mathematical_release": "reciprocal-robin-1.0.0",
+  "schema_version": "certification-results-1.0.0",
+  "verification_environment": {
+    "dependency_pins": "requirements-verification.txt",
+    "dps": 60,
+    "strict_release_environment": true,
+    "python_requirement": "^3.11"
+  }
+}

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite this release. The companion paper is listed below."
+title: "reciprocal-robin: proof verification for reciprocal LCM powers"
+type: software
+authors:
+  - family-names: Molnar
+    given-names: Grant
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/grantmolnar/reciprocal-robin"
+references:
+  - type: article
+    title: "Reciprocal LCM powers and Robin's criterion"
+    authors:
+      - family-names: Molnar
+        given-names: Grant
+    year: 2026
